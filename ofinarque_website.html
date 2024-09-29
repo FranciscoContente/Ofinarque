@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofinarque Architecture</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap');
+        
+        body, html {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            height: 100%;
+        }
+        .hero {
+            height: 100vh;
+            background-color: #f5f5f5;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            max-width: 600px;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #2c3e50;
+        }
+        .hero .company-name h1{
+            font-size: 6rem;
+            font-weight: 900;
+            color: v;
+            margin-bottom: 1rem;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+        .hero .company-name span{
+            font-size: 6rem;
+            font-weight: 900;
+            color: #00a86b;
+            margin-bottom: 1rem;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #34495e;
+            font-weight: 300;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #00a86b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        .cta-button:hover {
+            background-color: #026839;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/800');
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            z-index: 3;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 2rem;
+        }
+        nav ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+        nav ul li a:hover {
+            color: #026839;
+        }
+        main {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        .project, .lead-architect {
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+        }
+        .project img, .lead-architect img {
+            max-width: 50%;
+            height: auto;
+            margin-right: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .project-info, .architect-info {
+            flex: 1;
+        }
+        .lead-architect h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Shaping Tomorrow's<br>Skyline</h1>
+            <div class="company-name">
+                <h1>Ofin<span>arqu</span>e</h1>
+            </div>
+            <p>Where vision meets structure</p>
+            <a href="#contact" class="cta-button">Start Your Project</a>
+        </div>
+        <div class="hero-image"></div>
+    </header>
+    <main>
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <p>Ofinarque is a visionary architecture firm dedicated to creating innovative and sustainable designs. With our expertise and passion, we transform ideas into inspiring spaces that enrich lives and communities.</p>
+            
+            <div class="lead-architect">
+                <img src="/api/placeholder/400/600" alt="Lead Architect Portrait">
+                <div class="architect-info">
+                    <h3>Paulo Jorge Contente, Lead Architect</h3>
+                    <p>With over 20 years of experience in sustainable and innovative design, Maria Rodriguez leads Ofinarque with vision and expertise. Her work has been recognized with numerous awards, including the prestigious Green Building Excellence Award in 2022.</p>
+                    <p>Maria's portfolio spans a wide range of projects, from cutting-edge corporate headquarters to sustainable urban developments. Her unique approach combines aesthetic excellence with environmental responsibility, pushing the boundaries of modern architecture.</p>
+                    <p>Education: M.Arch, Harvard Graduate School of Design<br>
+                    Notable Projects: EcoTower (New York), Harmony Plaza (Singapore), Urban Oasis (Barcelona)</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="project">
+                <img src="/api/placeholder/600/400" alt="Urban Oasis">
+                <div class="project-info">
+                    <h3>Urban Oasis</h3>
+                    <p>A modern residential complex that integrates green spaces and sustainable technologies in the heart of the city.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/api/placeholder/600/400" alt="Innovation Hub">
+                <div class="project-info">
+                    <h3>Innovation Hub</h3>
+                    <p>A cutting-edge office building designed to foster creativity and collaboration in the tech industry.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Email: info@ofinarque.com</p>
+            <p>Phone: (555) 987-6543</p>
+            <p>Address: 456 Architect Avenue, Design District, OF 67890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ofinarque. All rights reserved.</p>
+    </footer>
+</body>
+</html>
