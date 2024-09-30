@@ -34,7 +34,7 @@
             margin-bottom: 0.5rem;
             font-weight: 700;
             line-height: 1.2;
-            color: #2c3e50;
+            color: #5b5b5b;
         }
         .hero .company-name h1{
             font-size: 6rem;
@@ -47,7 +47,7 @@
         .hero .company-name span{
             font-size: 6rem;
             font-weight: 900;
-            color: #00a86b;
+            color: #007800;
             margin-bottom: 1rem;
             line-height: 1;
             letter-spacing: -2px;
@@ -55,13 +55,13 @@
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            color: #34495e;
+            color: #5b5b5b;
             font-weight: 300;
         }
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background-color: #00a86b;
+            background-color: #007800;
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
@@ -92,6 +92,18 @@
             width: 100%;
             padding: 2rem;
             z-index: 3;
+        }
+        .half-circle {
+            width: 200px;
+            height: 200px;
+            border: 15px solid #026839;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            transform: rotate(-45deg);
+            margin-right: -50px;
         }
         nav ul {
             list-style-type: none;
@@ -147,6 +159,9 @@
             text-align: center;
             padding: 2rem;
         }
+        .hero, .hero-content, .company-name {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
     </style>
 </head>
 <body>
@@ -160,10 +175,13 @@
         </nav>
         <div class="hero-content">
             <h1>Shaping Tomorrow's<br>Skyline</h1>
-            <div class="company-name">
-                <h1>Ofin<span>arqu</span>e</h1>
-            </div>
-            <p>Where vision meets structure</p>
+            <div class="half-circle"></div>
+            <div>
+                <div class="company-name">
+                    <h1>Ofin<span>arqu</span>e</h1>
+                </div>
+                <div>      
+            <p>Arquitetura e Engenharia, LTD.</p>
             <a href="#contact" class="cta-button">Start Your Project</a>
         </div>
         <div class="hero-image"></div>
