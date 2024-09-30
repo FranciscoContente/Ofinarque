@@ -25,28 +25,29 @@
             position: absolute;
             top: 50%;
             left: 10%;
-            transform: translateY(-50%);
+            transform: translateY(-70%);
             max-width: 600px;
             z-index: 2;
         }
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.0rem;
+            margin-bottom: 0.6rem;
             font-weight: 700;
             line-height: 1.2;
             color: #5b5b5b;
         }
         .hero .company-name h1{
-            font-size: 6rem;
-            font-weight: 900;
+            font-size: 4rem;
+            font-weight: 500;
+            transform: rotate(45deg) translateY(55%) translateX(25%);
             color: v;
             margin-bottom: 1rem;
             line-height: 1;
             letter-spacing: -2px;
         }
         .hero .company-name span{
-            font-size: 6rem;
-            font-weight: 900;
+            font-size: 4rem;
+            font-weight: 500;
             color: #007800;
             margin-bottom: 1rem;
             line-height: 1;
@@ -58,9 +59,16 @@
             color: #5b5b5b;
             font-weight: 300;
         }
+        .rotated-text {
+            transform: rotate(45deg) translateX(30%); /* Rotate text by 45 degrees *
+            /*display: inline-block; /* Necessary for transform to work correctly */
+            margin-top: 100px; /* Optional: spacing above the text */
+            
+        }
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
+            transform: rotate(45deg) translateX(-10%)  translateY(300%);
             background-color: #007800;
             color: white;
             text-decoration: none;
@@ -71,19 +79,24 @@
         }
         .cta-button:hover {
             background-color: #026839;
-            transform: translateY(-3px);
+            transform: rotate(45deg) translateX(-10%)  translateY(300%);
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .hero-image {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60%;
+  
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/fig1.jpg");
+            
+            /* Set a specific height */
             height: 100%;
-            background-image: url('/api/placeholder/1200/800');
-            background-size: cover;
+
+            /* Position and center the image to scale nicely on all screens */
             background-position: center;
-            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            filter: grayscale(1) opacity(0.4);
+
+
         }
         nav {
             position: absolute;
@@ -94,9 +107,9 @@
             z-index: 3;
         }
         .half-circle {
-            width: 200px;
-            height: 200px;
-            border: 15px solid #026839;
+            width: 250px;
+            height: 250px;
+            border: 10px solid #007800;
             border-top-left-radius: 100px;
             border-top-right-radius: 100px;
             border-radius: 50%;
@@ -142,6 +155,7 @@
         }
         .project img, .lead-architect img {
             max-width: 50%;
+     
             height: auto;
             margin-right: 2rem;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -173,18 +187,19 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="hero-image">    </div>
         <div class="hero-content">
-            <h1>Shaping Tomorrow's<br>Skyline</h1>
-            <div class="half-circle"></div>
-            <div>
+            <h1>Transformamos a sua visão em realidade</h1>
+            <div class="half-circle">
                 <div class="company-name">
                     <h1>Ofin<span>arqu</span>e</h1>
                 </div>
-                <div>      
-            <p>Arquitetura e Engenharia, LTD.</p>
+                <div>
+                <div class="rotated-text">Arquitetura e Engenharia, LTD.</div>
             <a href="#contact" class="cta-button">Start Your Project</a>
         </div>
-        <div class="hero-image"></div>
+
+    
     </header>
     <main>
         <section id="about">
@@ -192,7 +207,7 @@
             <p>Ofinarque is a visionary architecture firm dedicated to creating innovative and sustainable designs. With our expertise and passion, we transform ideas into inspiring spaces that enrich lives and communities.</p>
             
             <div class="lead-architect">
-                <img src="/api/placeholder/400/600" alt="Lead Architect Portrait">
+                <img src="./images/Paulo.jpg" alt="Lead Architect Portrait">
                 <div class="architect-info">
                     <h3>Paulo Jorge Contente, Lead Architect</h3>
                     <p>With over 20 years of experience in sustainable and innovative design, Maria Rodriguez leads Ofinarque with vision and expertise. Her work has been recognized with numerous awards, including the prestigious Green Building Excellence Award in 2022.</p>
